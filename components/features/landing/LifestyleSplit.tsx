@@ -2,7 +2,7 @@ import React from "react";
 
 export function LifestyleSplit() {
   return (
-    <section id="nutrition" className="py-28 px-6 md:px-12 bg-background border-t border-foreground/5">
+    <section id="nutrition" className="py-28 px-6 md:px-12 bg-background">
       <div className="max-w-[88rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         <div className="relative h-[600px] overflow-hidden animate-on-scroll">
