@@ -45,16 +45,6 @@ export default function RootLayout({
       <body
         className={`${bebas.variable} ${dmsans.variable} ${playfair.variable} bg-background text-foreground font-dmsans antialiased selection:bg-primary selection:text-black overflow-x-hidden transition-colors duration-500`}
       >
-        {/* Vertical container lines */}
-        <div className="fixed inset-0 pointer-events-none z-50 flex justify-center w-full mix-blend-multiply opacity-[0.04]">
-          <div className="w-full max-w-[88rem] h-full flex justify-between px-6 lg:px-12">
-            <div className="w-px h-full bg-current" />
-            <div className="w-px h-full bg-current hidden md:block" />
-            <div className="w-px h-full bg-current hidden lg:block" />
-            <div className="w-px h-full bg-current" />
-          </div>
-        </div>
-
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

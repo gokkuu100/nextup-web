@@ -3,7 +3,7 @@ import { subscribeNewsletter } from "@/app/actions/contact";
 
 export function Footer() {
   return (
-    <footer className="bg-background text-foreground py-20 border-t border-foreground/5 transition-colors duration-500">
+    <footer className="bg-background text-foreground py-20 transition-colors duration-500">
       <div className="max-w-[88rem] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-4 gap-12 mb-20">
         
         <div className="col-span-1 lg:col-span-1">
@@ -62,7 +62,7 @@ export function Footer() {
 
       </div>
 
-      <div className="max-w-[88rem] mx-auto px-6 lg:px-12 pt-8 border-t border-foreground/5 flex flex-col md:flex-row justify-between gap-6 text-[10px] tracking-[0.2em] uppercase text-foreground/30 font-dmsans">
+      <div className="max-w-[88rem] mx-auto px-6 lg:px-12 pt-8 flex flex-col md:flex-row justify-between gap-6 text-[10px] tracking-[0.2em] uppercase text-foreground/30 font-dmsans">
         <p>© {new Date().getFullYear()} NextUp Fitness. Built for champions.</p>
         <div className="flex gap-8">
           <a href="#" className="hover:text-primary">Privacy Policy</a>

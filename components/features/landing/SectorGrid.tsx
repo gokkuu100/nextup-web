@@ -128,7 +128,7 @@ export function SectorGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="features" className="py-28 px-6 md:px-12 bg-background border-t border-foreground/5 overflow-hidden">
+    <section id="features" className="py-28 px-6 md:px-12 bg-background overflow-hidden">
       <div className="max-w-[88rem] mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-20">
           

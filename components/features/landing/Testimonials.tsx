@@ -23,7 +23,7 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section className="py-28 px-6 md:px-12 bg-background border-t border-foreground/5">
+    <section className="py-28 px-6 md:px-12 bg-background">
       <div className="max-w-[88rem] mx-auto">
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
