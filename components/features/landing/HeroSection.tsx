@@ -1,3 +1,6 @@
+import React from "react";
+import Link from "next/link";
+
 export function HeroSection() {
   return (
     <section id="hero" className="min-h-screen grid grid-cols-1 lg:grid-cols-2 pt-[72px] relative overflow-hidden section-container">
@@ -17,9 +20,9 @@ export function HeroSection() {
         </p>
         
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mt-10 animate-on-scroll">
-          <a href="#pricing" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-8 py-3.5 rounded-sm hover:bg-lime-300 hover:-translate-y-0.5 transition-all">
+          <Link href="/contact" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-8 py-3.5 rounded-sm hover:bg-lime-300 hover:-translate-y-0.5 transition-all">
             Start Now
-          </a>
+          </Link>
           <a href="#gallery" className="inline-flex items-center gap-2 text-foreground text-[10px] font-bold tracking-widest opacity-80 hover:opacity-100 hover:gap-3 transition-all uppercase">
             See the Gym →
           </a>

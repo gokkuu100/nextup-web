@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export function AppCTA() {
   return (
@@ -15,9 +16,9 @@ export function AppCTA() {
           Join the NextUp elite performance system today and experience precision-engineered training that delivers real results.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
-          <a href="#contact" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-white hover:-translate-y-1 transition-all">
+          <Link href="/contact" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-white hover:-translate-y-1 transition-all">
             Contact us now
-          </a>
+          </Link>
           <a href="tel:+2120000000" className="text-white text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors font-dmsans">
             Or call us: +212 6 00 00 00 00
           </a>

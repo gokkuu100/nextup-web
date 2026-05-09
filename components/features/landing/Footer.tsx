@@ -1,4 +1,5 @@
 import React from "react";
+import { subscribeNewsletter } from "@/app/actions/contact";
 
 export function Footer() {
   return (
@@ -44,12 +45,19 @@ export function Footer() {
 
         <div className="col-span-1">
           <h4 className="font-bebas text-lg tracking-widest uppercase mb-6 text-foreground">Newsletter</h4>
-          <div className="flex border-b border-foreground/20 pb-2">
-            <input type="email" placeholder="YOUR EMAIL" className="bg-transparent text-[10px] tracking-widest outline-none flex-1 font-dmsans"/>
-            <button className="text-primary hover:text-white transition-colors">
+          <form action={async (formData) => {
+            const result = await subscribeNewsletter(formData);
+            if (result.success) {
+              alert(result.message || "Subscribed successfully!");
+            } else {
+              alert("Something went wrong.");
+            }
+          }} className="flex border-b border-foreground/20 pb-2">
+            <input name="email" type="email" required placeholder="YOUR EMAIL" className="bg-transparent text-[10px] tracking-widest outline-none flex-1 font-dmsans"/>
+            <button type="submit" className="text-primary hover:text-white transition-colors">
               <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
             </button>
-          </div>
+          </form>
         </div>
 
       </div>
