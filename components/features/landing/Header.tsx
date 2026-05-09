@@ -27,7 +27,7 @@ export function Header() {
 
   return (
     <>
-      <nav id="navbar" className="fixed top-0 left-0 w-full z-[100] h-[72px] flex items-center justify-between px-6 md:px-10 transition-all duration-400 bg-background/80 backdrop-blur-md border-b border-foreground/5">
+      <nav id="navbar" className="fixed top-0 left-0 w-full z-[100] h-[72px] flex items-center justify-between px-6 md:px-10 transition-all duration-400 bg-background/80 backdrop-blur-md">
         <Link href="/" className="flex items-center group">
           <img 
             src="/logo/nextup_primary_logo_preview-removebg-preview.png" 
