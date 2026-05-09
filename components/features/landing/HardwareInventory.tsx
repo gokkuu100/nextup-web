@@ -1,86 +1,63 @@
-import React from "react";
-
 export function HardwareInventory() {
+  const programs = [
+    {
+      title: "Bodybuilding",
+      desc: "Develop your muscle mass with our intensive, scientifically-calibrated programs.",
+      img: "/images/workout-8.jpg",
+      icon: "solar:armchair-linear"
+    },
+    {
+      title: "Cardio & HIIT",
+      desc: "Improve your endurance and burn calories fast with high-intensity interval training.",
+      img: "/images/fitness.jpg",
+      icon: "solar:heart-pulse-linear"
+    },
+    {
+      title: "Cross Training",
+      desc: "Full body circuits designed for optimal conditioning and functional performance.",
+      img: "/images/hero-yoga.jpg",
+      icon: "solar:body-shape-linear"
+    }
+  ];
+
   return (
-    <section id="live-classes" className="bg-[#1D2331] text-[#F2EFEA] py-32 section-container dark-section relative overflow-hidden">
-      {/* Background patterns */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
-        <div className="grid grid-cols-12 h-full w-full">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="border-r border-white h-full" />
-          ))}
-        </div>
+    <section id="live-classes" className="py-28 px-6 md:px-12 bg-background">
+      <div className="text-center mb-16">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-primary flex justify-center items-center gap-2 mb-4">
+          <span className="w-7 h-px bg-primary"></span>
+          <span>Discover our workouts</span>
+          <span className="w-7 h-px bg-primary"></span>
+        </p>
+        <h2 className="font-bebas text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] tracking-tight uppercase text-foreground animate-on-scroll">
+          TARGETED PROGRAMS
+        </h2>
       </div>
 
-      <div className="max-w-[88rem] mx-auto px-6 lg:px-12 relative z-10">
-        
-        <div className="flex justify-between items-end mb-20 border-b border-white/10 pb-8">
-          <h2 className="text-6xl md:text-8xl tracking-tighter font-jakarta font-light">
-            Live Classes
-          </h2>
-          <span className="text-xs font-geist opacity-30 mb-4 tracking-[0.2em]">SPEC_089</span>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-center">
-          
-          {/* Left Column */}
-          <div className="space-y-12">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-40 mb-6 font-geist">Live Features</p>
-              <div className="space-y-8">
-                {[
-                  { num: "01", label: "Real-time Biometrics", sub: "Live heart-rate and effort tracking" },
-                  { num: "02", label: "Form Synthesis", sub: "Instant AI visual form correction" },
-                  { num: "03", label: "Global Leaderboards", sub: "Compete with athletes worldwide" },
-                  { num: "04", label: "Direct Trainer Audio", sub: "Low-latency professional guidance" },
-                ].map((item) => (
-                  <div key={item.num} className="flex gap-6 group cursor-default">
-                    <span className="text-xs font-geist opacity-30 mt-1">{item.num}</span>
-                    <div>
-                      <h4 className="text-lg font-jakarta font-medium group-hover:text-[#C48C56] transition-colors">{item.label}</h4>
-                      <p className="text-xs opacity-40 font-geist mt-1 uppercase tracking-wider">{item.sub}</p>
-                    </div>
-                  </div>
-                ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {programs.map((program, idx) => (
+          <div key={idx} className="group relative h-[450px] overflow-hidden animate-on-scroll">
+            <img 
+              src={program.img} 
+              className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700" 
+              alt={program.title}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 right-0 p-8">
+              <div className="w-10 h-10 bg-primary text-black flex items-center justify-center rounded-sm mb-4">
+                <iconify-icon icon={program.icon} width="24" height="24"></iconify-icon>
               </div>
+              <h3 className="font-bebas text-3xl text-white tracking-wide mb-2 uppercase">
+                {program.title}
+              </h3>
+              <p className="text-xs text-white/60 mb-4 font-dmsans">
+                {program.desc}
+              </p>
+              <a href="#contact" className="text-[10px] tracking-[0.15em] uppercase text-primary font-bold hover:text-white transition-colors">
+                Join this program →
+              </a>
             </div>
           </div>
-
-          {/* Center Image */}
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-white/5">
-             <img 
-               src="/images/workout-8.jpg" 
-               alt="Live Session" 
-               className="w-full h-full object-cover grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-700" 
-             />
-             <div className="absolute inset-0 bg-gradient-to-t from-[#1D2331] via-transparent to-transparent opacity-60"></div>
-             
-             {/* Scanning effect */}
-             <div className="absolute top-0 left-0 w-full h-px bg-[#C48C56] opacity-30 animate-scan pointer-events-none"></div>
-          </div>
-
-          {/* Right Column */}
-          <div className="space-y-12 lg:pl-12">
-            <div>
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] opacity-40 mb-6 font-geist">Performance Metrics</p>
-              <div className="space-y-8">
-                {[
-                  { label: "Streaming Latency", val: "< 120ms" },
-                  { label: "Trainer Certification", val: "Elite Tier" },
-                  { label: "Visual Processing", val: "4K / 60fps" },
-                  { label: "Telemetry Sync", val: "1000Hz" },
-                ].map((item) => (
-                  <div key={item.label} className="border-b border-white/5 pb-6">
-                    <h4 className="text-xs font-geist opacity-40 uppercase tracking-widest mb-2">{item.label}</h4>
-                    <p className="text-2xl font-jakarta font-light text-[#F2EFEA] tracking-tight">{item.val}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-        </div>
-
+        ))}
       </div>
     </section>
   );

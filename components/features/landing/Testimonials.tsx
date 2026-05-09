@@ -23,51 +23,52 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section className="py-32 section-container bg-[#F2EFEA]">
-      <div className="max-w-[88rem] mx-auto px-6 lg:px-12">
+    <section className="py-28 px-6 md:px-12 bg-background border-t border-foreground/5">
+      <div className="max-w-[88rem] mx-auto">
         
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
           <div>
-            <p className="text-sm font-medium tracking-tight opacity-50 mb-4 uppercase font-geist">
-              ( Field Reports )
+            <p className="text-[10px] tracking-[0.2em] uppercase text-primary flex items-center gap-2 mb-4">
+              <span className="w-7 h-px bg-primary"></span>
+              <span>Validated Results</span>
             </p>
-            <h2 className="text-5xl md:text-6xl tracking-tighter font-jakarta font-light text-[#1D2331]">
-              Elite Athlete<br />Validation
+            <h2 className="font-bebas text-6xl md:text-8xl leading-[0.85] tracking-tight text-foreground uppercase">
+              FIELD<br/><span className="text-primary">REPORTS</span>
             </h2>
           </div>
           <div className="flex gap-4">
-            <button className="w-12 h-12 rounded-full border border-[#1D2331]/10 flex items-center justify-center hover:bg-[#1D2331] hover:text-[#F2EFEA] transition-all">
+            <button className="w-12 h-12 border border-foreground/10 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
               <iconify-icon icon="solar:arrow-left-linear" class="text-xl"></iconify-icon>
             </button>
-            <button className="w-12 h-12 rounded-full border border-[#1D2331]/10 flex items-center justify-center hover:bg-[#1D2331] hover:text-[#F2EFEA] transition-all">
+            <button className="w-12 h-12 border border-foreground/10 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
               <iconify-icon icon="solar:arrow-right-linear" class="text-xl"></iconify-icon>
             </button>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-foreground/5 border border-foreground/5 overflow-hidden font-dmsans">
           {TESTIMONIALS.map((item) => (
-            <div key={item.id} className="card-flashlight p-8 min-h-[400px] flex flex-col justify-between group cursor-default">
-              <div className="card-content">
+            <div key={item.id} className="bg-background p-10 min-h-[400px] flex flex-col justify-between group hover:bg-foreground/[0.02] transition-all animate-on-scroll">
+              <div>
                 <iconify-icon 
                   icon="solar:quote-bold-duotone" 
-                  class="text-4xl text-[#C48C56] mb-8 opacity-20 group-hover:opacity-100 transition-opacity"
+                  class="text-4xl text-primary mb-8 opacity-20 group-hover:opacity-100 transition-opacity"
                 ></iconify-icon>
-                <p className="text-2xl font-playfair italic leading-relaxed text-[#1D2331] mb-12">
+                <p className="text-xl italic leading-relaxed text-foreground/80 mb-12">
                   "{item.quote}"
                 </p>
               </div>
               
-              <div className="card-content flex items-end justify-between">
+              <div className="flex items-end justify-between">
                 <div>
-                  <p className="font-semibold tracking-tight text-[#1D2331] font-jakarta">
+                  <h4 className="font-bebas text-2xl text-foreground tracking-wide uppercase mb-1">
                     {item.author}
-                  </p>
-                  <p className="text-sm opacity-50 font-geist uppercase tracking-wider">
+                  </h4>
+                  <p className="text-[10px] tracking-widest text-primary uppercase font-bold">
                     {item.role}
                   </p>
                 </div>
-                <span className="text-xs font-geist opacity-30">{item.id}</span>
+                <span className="text-xs font-bebas text-foreground/20">{item.id}</span>
               </div>
             </div>
           ))}
