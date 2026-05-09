@@ -28,21 +28,21 @@ export function MetricsSection() {
     },];
 
   return (
-    <section className="bg-[#1D2331] border-y border-white/5 relative z-20">
+    <section className="bg-foreground text-background border-y border-background/5 relative z-20 transition-colors duration-500">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-white/5 text-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-background/5 text-center">
           {metrics.map((metric, i) => (
             <div
               key={i}
               className={`py-24 px-6 flex flex-col items-center justify-center animate-on-scroll [animation:animationIn_0.8s_ease-out_${metric.delay}_both]`}
             >
-              <span className="font-display text-6xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tighter mb-4 drop-shadow-lg">
+              <span className="font-display text-6xl md:text-7xl lg:text-8xl font-semibold text-background tracking-tighter mb-4 drop-shadow-lg">
                 {metric.value}
-                <span className="text-3xl text-[#3F556B] ml-1">
+                <span className="text-3xl opacity-30 ml-1">
                   {metric.unit}
                 </span>
               </span>
-              <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-semibold">
+              <span className="text-xs uppercase tracking-[0.2em] text-background/50 font-semibold">
                 {metric.label}
               </span>
             </div>
