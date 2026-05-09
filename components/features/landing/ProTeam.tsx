@@ -26,7 +26,7 @@ export function ProTeam() {
           <span className="w-7 h-px bg-primary"></span>
         </p>
         <h2 className="font-bebas text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] tracking-tight uppercase text-foreground animate-on-scroll">
-          EXPERT COACHS
+          EXPERT COACHES
         </h2>
       </div>
 
