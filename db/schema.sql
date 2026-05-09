@@ -1,5 +1,7 @@
--- CreateTable
-CREATE TABLE "Contact" (
+-- Neon / PostgreSQL schema for NextUp (run against your database once, or use Neon SQL Editor)
+-- Tables match prior Prisma migration naming so existing Neon branches keep working.
+
+CREATE TABLE IF NOT EXISTS "Contact" (
     "id" TEXT NOT NULL,
     "firstName" TEXT NOT NULL,
     "lastName" TEXT NOT NULL,
@@ -11,8 +13,7 @@ CREATE TABLE "Contact" (
     CONSTRAINT "Contact_pkey" PRIMARY KEY ("id")
 );
 
--- CreateTable
-CREATE TABLE "Newsletter" (
+CREATE TABLE IF NOT EXISTS "Newsletter" (
     "id" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -20,5 +21,4 @@ CREATE TABLE "Newsletter" (
     CONSTRAINT "Newsletter_pkey" PRIMARY KEY ("id")
 );
 
--- CreateIndex
-CREATE UNIQUE INDEX "Newsletter_email_key" ON "Newsletter"("email");
+CREATE UNIQUE INDEX IF NOT EXISTS "Newsletter_email_key" ON "Newsletter"("email");

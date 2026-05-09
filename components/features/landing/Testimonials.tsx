@@ -55,7 +55,7 @@ export function Testimonials() {
                   class="text-4xl text-primary mb-8 opacity-20 group-hover:opacity-100 transition-opacity"
                 ></iconify-icon>
                 <p className="text-xl italic leading-relaxed text-foreground/80 mb-12">
-                  "{item.quote}"
+                  &ldquo;{item.quote}&rdquo;
                 </p>
               </div>
               

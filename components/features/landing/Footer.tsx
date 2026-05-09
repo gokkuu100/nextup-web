@@ -48,9 +48,9 @@ export function Footer() {
           <form action={async (formData) => {
             const result = await subscribeNewsletter(formData);
             if (result.success) {
-              alert(result.message || "Subscribed successfully!");
+              alert("Subscribed successfully!");
             } else {
-              alert("Something went wrong.");
+              alert(result.error ?? "Something went wrong.");
             }
           }} className="flex border-b border-foreground/20 pb-2">
             <input name="email" type="email" required placeholder="YOUR EMAIL" className="bg-transparent text-[10px] tracking-widest outline-none flex-1 font-dmsans"/>

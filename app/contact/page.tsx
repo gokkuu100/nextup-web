@@ -1,11 +1,30 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "@/components/features/landing/Header";
 import { Footer } from "@/components/features/landing/Footer";
 import { submitContactForm } from "@/app/actions/contact";
 
 export default function ContactPage() {
+  const [pending, setPending] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setPending(true);
+    try {
+      const formData = new FormData(e.currentTarget);
+      const result = await submitContactForm(formData);
+      if (result.success) {
+        alert("Message sent successfully!");
+        e.currentTarget.reset();
+      } else {
+        alert(result.error ?? "Something went wrong. Please try again.");
+      }
+    } finally {
+      setPending(false);
+    }
+  }
+
   return (
     <main className="bg-background text-foreground min-h-screen pt-24 font-dmsans">
       <Header />
@@ -21,7 +40,9 @@ export default function ContactPage() {
                 <span>Get in touch</span>
               </p>
               <h1 className="font-bebas text-7xl md:text-8xl lg:text-[9rem] leading-[0.85] tracking-tight uppercase text-foreground mb-12">
-                LET'S START THE<br/><span className="text-primary">DIALOGUE</span>
+                {"LET'S START THE"}
+                <br/>
+                <span className="text-primary">DIALOGUE</span>
               </h1>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mt-16">
@@ -54,14 +75,7 @@ export default function ContactPage() {
 
             {/* Right Side: Form */}
             <div className="bg-foreground/[0.02] p-8 md:p-12 animate-on-scroll">
-              <form action={async (formData) => {
-                const result = await submitContactForm(formData);
-                if (result.success) {
-                  alert("Message sent successfully!");
-                } else {
-                  alert("Something went wrong. Please try again.");
-                }
-              }} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-2">
                     <label className="text-[10px] uppercase tracking-widest text-foreground/40 font-bold">First Name</label>
@@ -93,8 +107,12 @@ export default function ContactPage() {
                   <textarea name="message" rows={4} required className="w-full bg-transparent border-b border-foreground/10 py-3 focus:border-primary transition-colors outline-none text-foreground resize-none" placeholder="Tell us about your goals..."></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-primary text-black font-bold text-[10px] tracking-widest uppercase py-5 rounded-sm hover:bg-white transition-all mt-4">
-                  Send Message
+                <button
+                  type="submit"
+                  disabled={pending}
+                  className="w-full bg-primary text-black font-bold text-[10px] tracking-widest uppercase py-5 rounded-sm hover:bg-white transition-all mt-4 disabled:opacity-60 disabled:pointer-events-none"
+                >
+                  {pending ? "Sending…" : "Send Message"}
                 </button>
               </form>
             </div>

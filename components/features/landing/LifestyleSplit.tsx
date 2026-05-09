@@ -25,7 +25,7 @@ export function LifestyleSplit() {
             SMART NUTRITION<br/><span className="text-primary">ANALYSIS</span>
           </h2>
           <p className="text-sm text-foreground/60 leading-relaxed max-w-lg mb-10 font-dmsans">
-            Our AI analyzes your food and provides personalized recommendations based on your fitness goals. Whether you want to lose weight, build muscle, or maintain - we've got you covered.
+            {"Our AI analyzes your food and provides personalized recommendations based on your fitness goals. Whether you want to lose weight, build muscle, or maintain - we've got you covered."}
           </p>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 font-dmsans">
