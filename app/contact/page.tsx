@@ -44,7 +44,7 @@ export default function ContactPage() {
 
               {/* Socials */}
               <div className="flex gap-10 mt-16">
-                {['instagram', 'twitter', 'facebook', 'youtube'].map((social) => (
+                {['instagram', 'facebook', 'youtube'].map((social) => (
                   <a key={social} href="#" className="w-12 h-12 flex items-center justify-center border border-foreground/10 hover:bg-primary hover:text-black hover:border-primary transition-all">
                     <iconify-icon icon={`ant-design:${social}-filled`} width="22" height="22"></iconify-icon>
                   </a>
