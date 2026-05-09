@@ -10,6 +10,8 @@ export async function submitContactForm(formData: FormData) {
   const subject = formData.get("subject") as string;
   const message = formData.get("message") as string;
 
+  console.log("Submitting form:", { firstName, lastName, email, subject });
+
   try {
     await prisma.contact.create({
       data: {
@@ -42,10 +44,6 @@ export async function subscribeNewsletter(formData: FormData) {
     revalidatePath("/");
     return { success: true };
   } catch (error) {
-    // Handle duplicate emails
-    if ((error as any).code === 'P2002') {
-      return { success: true, message: "Already subscribed!" };
-    }
     console.error("Newsletter error:", error);
     return { success: false, error: "Failed to subscribe" };
   }

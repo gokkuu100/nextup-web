@@ -47,7 +47,7 @@ export function Pricing() {
             key={idx}
             className={`flex flex-col items-center text-center p-10 reveal animate-on-scroll
               ${plan.popular 
-                ? "bg-primary scale-105 shadow-[0_0_40px_rgba(163,230,53,0.15)] z-10 relative" 
+                ? "bg-primary scale-105 shadow-[0_0_40px_rgba(198,155,82,0.15)] z-10 relative" 
                 : "bg-foreground/[0.02] border border-foreground/10"
               }
             `}
