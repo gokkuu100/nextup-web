@@ -60,7 +60,7 @@ export function HeroSection() {
         <div className="h-full grid grid-cols-12 grid-rows-6 gap-4">
           
           {/* Main Large Image */}
-          <div className="col-span-7 row-span-6 relative overflow-hidden group rounded-2xl border border-foreground/5 shadow-2xl">
+          <div className="col-span-7 row-span-6 relative overflow-hidden group rounded-2xl shadow-2xl">
             <img 
               src="/images/hero-fit.jpg" 
               alt="Elite Performance" 
@@ -77,7 +77,7 @@ export function HeroSection() {
           </div>
           
           {/* Top Right Image */}
-          <div className="col-span-5 row-span-3 relative overflow-hidden group rounded-2xl border border-foreground/5 shadow-xl">
+          <div className="col-span-5 row-span-3 relative overflow-hidden group rounded-2xl shadow-xl">
             <img 
               src="/images/fit-female.jpg" 
               alt="Structural Strength" 
@@ -87,7 +87,7 @@ export function HeroSection() {
           </div>
           
           {/* Bottom Right Image */}
-          <div className="col-span-5 row-span-3 relative overflow-hidden group rounded-2xl border border-foreground/5 shadow-xl">
+          <div className="col-span-5 row-span-3 relative overflow-hidden group rounded-2xl shadow-xl">
             <img 
               src="/images/fitness.jpg" 
               alt="Elite Environment" 
