@@ -9,7 +9,7 @@ export function LifestyleSplit() {
           <img 
             src="/images/nutrition.jpg" 
             alt="AI Nutrition" 
-            className="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:scale-105 transition-all duration-700"
+            className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
           />
           <div className="absolute top-8 left-8 bg-primary text-black font-bebas text-2xl px-6 py-2 tracking-wide uppercase">
             Precision Fuel

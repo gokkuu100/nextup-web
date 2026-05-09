@@ -85,12 +85,11 @@ const AccordionItem = ({
       `}
       onMouseEnter={onMouseEnter}
     >
-      {/* Background Image */}
       <img
         src={item.imageUrl}
         alt={item.title}
         className={`absolute inset-0 w-full h-full object-cover transition-all duration-1000 
-          ${isActive ? 'grayscale-0 scale-100' : 'grayscale opacity-40 scale-110'}
+          ${isActive ? 'scale-100' : 'opacity-40 scale-110'}
         `}
       />
       

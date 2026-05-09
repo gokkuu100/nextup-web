@@ -6,7 +6,7 @@ export function ImmersiveBreak() {
       <img
         src="/images/fitness.jpg"
         alt="Athlete training"
-        className="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2000ms] ease-out grayscale brightness-50"
+        className="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2000ms] ease-out brightness-50"
       />
       <div className="relative z-20 text-center px-6">
         <p className="text-primary text-[10px] tracking-[0.3em] uppercase mb-6 font-bold font-dmsans">Experience the Elite</p>

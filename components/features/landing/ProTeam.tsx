@@ -36,7 +36,7 @@ export function ProTeam() {
             <div className="relative overflow-hidden mb-6 h-[450px]">
               <img 
                 src={coach.img} 
-                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500" 
+                className="w-full h-full object-cover opacity-90 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500" 
                 alt={coach.name}
               />
               <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
