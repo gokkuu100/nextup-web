@@ -55,52 +55,45 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Right Image Grid (Bento Grid) */}
+      {/* Right Image Grid (Three Image Bento) */}
       <div className="flex-1 relative min-h-[600px] lg:min-h-screen p-4 lg:p-10">
-        <div className="h-full grid grid-cols-2 grid-rows-4 gap-4">
+        <div className="h-full grid grid-cols-12 grid-rows-6 gap-4">
           
-          {/* Big Item 1 */}
-          <div className="col-span-1 row-span-3 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-2xl">
+          {/* Main Large Image */}
+          <div className="col-span-7 row-span-6 relative overflow-hidden group rounded-2xl border border-foreground/5 shadow-2xl">
             <img 
               src="/images/hero-fit.jpg" 
-              alt="Elite Athlete" 
+              alt="Elite Performance" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-            <div className="absolute bottom-6 left-6">
-               <span className="text-[10px] tracking-widest text-primary font-bold uppercase">System_01</span>
-               <h4 className="font-bebas text-2xl text-white uppercase">Precision</h4>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div className="absolute bottom-8 left-8">
+               <div className="flex items-center gap-3 mb-3">
+                 <span className="w-8 h-px bg-primary"></span>
+                 <span className="text-[10px] tracking-[0.3em] text-primary font-bold uppercase">Core_01</span>
+               </div>
+               <h4 className="font-bebas text-4xl text-white uppercase leading-none tracking-tight">Technical<br/>Superiority</h4>
             </div>
           </div>
           
-          {/* Top Right Item 2 */}
-          <div className="col-span-1 row-span-2 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-xl">
+          {/* Top Right Image */}
+          <div className="col-span-5 row-span-3 relative overflow-hidden group rounded-2xl border border-foreground/5 shadow-xl">
             <img 
               src="/images/fit-female.jpg" 
-              alt="Strength Training" 
+              alt="Structural Strength" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
           </div>
           
-          {/* Bottom Middle Item 3 */}
-          <div className="col-span-1 row-span-2 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-xl">
+          {/* Bottom Right Image */}
+          <div className="col-span-5 row-span-3 relative overflow-hidden group rounded-2xl border border-foreground/5 shadow-xl">
             <img 
               src="/images/fitness.jpg" 
-              alt="Gym Environment" 
+              alt="Elite Environment" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-          </div>
-
-          {/* Bottom Left Small Item 4 */}
-          <div className="col-span-1 row-span-1 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-xl">
-             <div className="absolute inset-0 bg-primary/20 backdrop-blur-sm z-10 flex items-center justify-center p-4">
-                <img src="/logo/nextup_icon_preview.png" className="h-12 w-auto opacity-80" />
-             </div>
-             <img 
-              src="/images/workout-7.jpg" 
-              alt="Gym Gear" 
-              className="w-full h-full object-cover"
-            />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
           </div>
 
         </div>
