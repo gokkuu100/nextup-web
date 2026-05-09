@@ -2,21 +2,21 @@ import React from "react";
 
 export function ImmersiveBreak() {
   return (
-    <section className="relative h-[80vh] w-full overflow-hidden flex items-center justify-center section-container group">
-      <div className="absolute inset-0 bg-black/20 z-10 transition-colors group-hover:bg-black/10" />
+    <section className="relative h-[60vh] w-full overflow-hidden flex items-center justify-center group">
       <img
         src="/images/fitness.jpg"
         alt="Athlete training"
-        className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-out"
+        className="absolute inset-0 w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[2000ms] ease-out grayscale brightness-50"
       />
-      <div className="relative z-20 text-center text-white max-w-3xl px-6">
-        <h2 className="text-4xl md:text-5xl tracking-tight mb-6 leading-tight drop-shadow-lg font-jakarta font-light">
-          Engineered around human mechanics, anticipating your movement before you make it.
+      <div className="relative z-20 text-center px-6">
+        <p className="text-primary text-[10px] tracking-[0.3em] uppercase mb-6 font-bold font-dmsans">Experience the Elite</p>
+        <h2 className="text-6xl md:text-8xl lg:text-[10rem] text-white font-bebas leading-none tracking-tight uppercase mb-8 drop-shadow-2xl">
+          THE ARENA OF<br/><span className="text-primary">CHAMPIONS</span>
         </h2>
-        <div className="flex items-center justify-center gap-3 text-lg opacity-90 drop-shadow-md">
-          <div className="w-8 h-[1px] bg-white/60" />
-          <p className="font-geist">Metrics indicate 98% optimal performance alignment.</p>
-          <div className="w-8 h-[1px] bg-white/60" />
+        <div className="flex items-center justify-center gap-4">
+          <div className="w-12 h-px bg-primary/50" />
+          <p className="text-white/60 text-[10px] tracking-[0.2em] uppercase font-dmsans">Engineered for Performance</p>
+          <div className="w-12 h-px bg-primary/50" />
         </div>
       </div>
     </section>
