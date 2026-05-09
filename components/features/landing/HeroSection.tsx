@@ -60,7 +60,7 @@ export function HeroSection() {
         <div className="absolute inset-0 flex gap-1 p-1">
           {/* Panel 1 */}
           <div className="flex-1 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 right-0 h-20 bg-[#06DC16]/20 z-10 flex items-end p-2 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-20 bg-[#04b011]/20 z-10 flex items-end p-2 overflow-hidden">
                <img src="/images/workout-7.jpg" className="w-full h-full object-cover opacity-50" />
             </div>
             <img 
