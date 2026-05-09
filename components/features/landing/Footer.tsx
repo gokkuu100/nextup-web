@@ -8,9 +8,14 @@ export function Footer() {
         <div className="col-span-1 lg:col-span-1">
           <a href="#" className="flex items-center mb-6 group">
             <img 
+              src="/logo/nextup_primary_logo_preview-removebg-preview.png" 
+              alt="NextUp Logo" 
+              className="h-12 w-auto transition-transform group-hover:scale-105 block dark:hidden"
+            />
+            <img 
               src="/logo/nextup_primary_logo_dark_preview-removebg-preview.png" 
               alt="NextUp Logo" 
-              className="h-12 w-auto transition-transform group-hover:scale-105"
+              className="h-12 w-auto transition-transform group-hover:scale-105 hidden dark:block"
             />
           </a>
           <p className="text-xs text-foreground/50 leading-relaxed max-w-xs font-dmsans">
