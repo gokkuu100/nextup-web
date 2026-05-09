@@ -13,13 +13,18 @@ const brands = [
 
 export function TrustedBy() {
   return (
-    <section className="py-16 border-b border-black/5 bg-white/30 backdrop-blur-md">
-      <div className="max-w-[88rem] mx-auto px-6 lg:px-12 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-        {brands.map((brand) => (
-          <div key={brand.label} className={`hover:opacity-100 transition-opacity ${brand.show}`}>
-            <iconify-icon icon={brand.icon} width="64" height="64"></iconify-icon>
-          </div>
-        ))}
+    <section className="py-20 bg-background border-b border-foreground/5 overflow-hidden">
+      <div className="max-w-[88rem] mx-auto px-6 lg:px-12">
+        <p className="text-center font-bebas text-sm tracking-[0.3em] uppercase text-foreground/30 mb-12">
+          TRUSTED BY GLOBAL LEADERS
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
+          {brands.map((brand) => (
+            <div key={brand.label} className={`hover:opacity-100 transition-opacity hover:text-primary ${brand.show}`}>
+              <iconify-icon icon={brand.icon} width="40" height="40"></iconify-icon>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
