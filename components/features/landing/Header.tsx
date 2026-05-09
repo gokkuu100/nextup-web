@@ -55,7 +55,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-5">
              <ThemeToggle />
              <Link href="/contact" className="border-[1.5px] border-primary text-primary text-[10px] font-bold tracking-widest uppercase px-5 py-2.5 rounded-sm hover:bg-primary hover:text-black transition-all">
-               Join Now
+               Contact
              </Link>
           </div>
           
