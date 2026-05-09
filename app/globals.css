@@ -5,7 +5,7 @@
 :root {
   --background: #fdfdfd;
   --foreground: #0a0a0a;
-  --primary: #04b011;
+  --primary: #C69B52;
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
@@ -13,7 +13,7 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #f2efea;
-  --primary: #04b011;
+  --primary: #C69B52;
 }
 
 body {
@@ -65,7 +65,7 @@ body {
   left: 50%;
   width: 250%;
   height: 250%;
-  background: #04b011 !important;
+  background: #C69B52 !important;
   border-radius: 42%;
   transform: translate(-50%, 0);
   transition: top 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 0.8s ease;
@@ -79,7 +79,7 @@ body {
 }
 
 .btn-liquid:hover {
-  color: #0a0a0a !important; /* Ensure visibility on green */
+  color: #0a0a0a !important; /* Ensure visibility on primary */
 }
 
 /* ─── Adaptive Primary Button ─── */
