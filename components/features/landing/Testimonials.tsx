@@ -23,7 +23,7 @@ const TESTIMONIALS = [
 
 export function Testimonials() {
   return (
-    <section className="py-28 px-6 md:px-12 bg-background">
+    <section className="py-28 px-6 md:px-12 bg-[#111111]">
       <div className="max-w-[88rem] mx-auto">
         
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
@@ -48,7 +48,7 @@ export function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0.5 bg-foreground/5 border border-foreground/5 overflow-hidden font-dmsans">
           {TESTIMONIALS.map((item) => (
-            <div key={item.id} className="bg-background p-10 min-h-[400px] flex flex-col justify-between group hover:bg-foreground/[0.02] transition-all animate-on-scroll">
+            <div key={item.id} className="bg-[#111111] p-10 min-h-[400px] flex flex-col justify-between group hover:bg-foreground/[0.02] transition-all animate-on-scroll">
               <div>
                 <iconify-icon 
                   icon="solar:quote-bold-duotone" 

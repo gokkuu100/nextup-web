@@ -3,7 +3,7 @@ import { subscribeNewsletter } from "@/app/actions/contact";
 
 export function Footer() {
   return (
-    <footer className="bg-background text-foreground py-20 transition-colors duration-500">
+    <footer className="bg-[#111111] text-foreground py-20 transition-colors duration-500">
       <div className="max-w-[88rem] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-4 gap-12 mb-20">
         
         <div className="col-span-1 lg:col-span-1">
