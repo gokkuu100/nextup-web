@@ -96,13 +96,13 @@ export function Header() {
               <span className="text-[10px] tracking-widest uppercase text-foreground/40 font-bold">Theme</span>
               <ThemeToggle />
             </div>
-            <a 
-              href="#contact" 
+            <Link 
+              href="/contact" 
               onClick={() => setIsOpen(false)}
               className="bg-primary text-black text-center font-bold text-[10px] tracking-widest uppercase py-5 rounded-sm"
             >
-              Start Your Transformation
-            </a>
+              Contact
+            </Link>
           </div>
         </div>
       </div>
