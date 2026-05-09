@@ -5,31 +5,31 @@ import React, { useState } from 'react';
 const ACCORDION_ITEMS = [
   {
     id: 1,
-    title: 'On-Demand Trainers',
-    description: 'Request certified trainers to your location or meet at a nearby gym. Like Uber, but for fitness.',
+    title: 'Real-Time Radar',
+    description: 'Instantly scan your perimeter for available trainers. Filter by discipline and connect locally. No waiting.',
     imageUrl: '/images/workout-5.jpg',
-    spec: 'ELITE_01'
+    spec: 'PROTOCOL_01'
   },
   {
     id: 2,
-    title: 'Training Videos',
-    description: 'Access a library of professionally designed workout programs you can follow anytime.',
+    title: 'Instant Booking',
+    description: 'Send a connection request and get matched instantly. Our dynamic engine ensures you train within minutes.',
     imageUrl: '/images/workout-7.jpg',
-    spec: 'ELITE_02'
+    spec: 'PROTOCOL_02'
   },
   {
     id: 3,
-    title: 'AI Nutrition',
-    description: 'Get personalized food analysis based on your goals. Our AI helps you eat smarter.',
+    title: 'AI Intelligence',
+    description: 'Unlock premium AI-generated training protocols based on your wearable data and past sessions.',
     imageUrl: '/images/nutrition.jpg',
-    spec: 'ELITE_03'
+    spec: 'PROTOCOL_03'
   },
   {
     id: 4,
-    title: 'Live Training',
-    description: 'Train with expert coaches via live video. See them, they see you - exercise together.',
+    title: 'Total Control',
+    description: 'Trainers monetize empty slots with custom hourly rates. Toggle availability and watch requests flow in.',
     imageUrl: '/images/hero-fit.jpg',
-    spec: 'ELITE_04'
+    spec: 'PROTOCOL_04'
   },
 ];
 
@@ -115,13 +115,13 @@ export function SectorGrid() {
           <div className="w-full lg:w-1/3">
             <p className="text-[10px] tracking-[0.2em] uppercase text-primary flex items-center gap-2 mb-6">
               <span className="w-7 h-px bg-primary"></span>
-              <span>Advanced Features</span>
+              <span>Network Capabilities</span>
             </p>
             <h2 className="font-bebas text-6xl md:text-8xl leading-[0.85] tracking-tight text-foreground uppercase mb-8">
-              AURA OF<br/><span className="text-primary">EXCELLENCE</span>
+              THE<br/><span className="text-primary">PROTOCOL</span>
             </h2>
             <p className="text-sm text-foreground/60 leading-relaxed max-w-md mb-12 font-dmsans">
-              The NextUp mobile platform bridges the gap between intent and action. Real-time trainer matching, secure scheduling, and location-based dispatch.
+              NextUp bridges the gap between intent and action. Frictionless real-time matchmaking, dynamic hourly rates, and AI-driven performance tracking.
             </p>
             
             <a

@@ -101,7 +101,7 @@ export function Header() {
               onClick={() => setIsOpen(false)}
               className="bg-primary text-black text-center font-bold text-[10px] tracking-widest uppercase py-5 rounded-sm"
             >
-              Contact
+              Contact Kavetsa
             </Link>
           </div>
         </div>

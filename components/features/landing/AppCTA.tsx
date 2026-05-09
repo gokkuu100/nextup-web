@@ -8,16 +8,16 @@ export function AppCTA() {
       <div className="absolute inset-0 bg-black/60"></div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <p className="text-[10px] tracking-[0.2em] uppercase text-primary mb-6 font-bold font-dmsans">Ready for the change?</p>
+        <p className="text-[10px] tracking-[0.2em] uppercase text-primary mb-6 font-bold font-dmsans">Network Access</p>
         <h2 className="font-bebas text-6xl md:text-8xl lg:text-[9rem] leading-[0.85] tracking-tight text-white uppercase mb-10 animate-on-scroll">
-          READY TO<br/><span className="text-primary">TRANSFORM?</span>
+          JOIN THE<br/><span className="text-primary">PLATFORM</span>
         </h2>
         <p className="text-white/60 text-sm md:text-base mb-12 max-w-xl mx-auto font-dmsans">
-          Join the NextUp elite performance system today and experience precision-engineered training that delivers real results.
+          Whether you are a serious athlete looking for instant matchmaking or an elite trainer looking to take absolute control of your schedule. NextUp is your network.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
           <Link href="/contact" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-white hover:-translate-y-1 transition-all">
-            Contact us now
+            Join the Network
           </Link>
           <a href="tel:+2120000000" className="text-white text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors font-dmsans">
             Or call us: +212 6 00 00 00 00

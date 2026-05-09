@@ -9,25 +9,25 @@ export function HeroSection() {
       <div className="flex-1 flex flex-col justify-center px-6 md:px-12 lg:px-20 py-20 z-10">
         <div className="inline-flex items-center gap-2 text-[10px] tracking-[0.3em] uppercase text-primary mb-8 animate-on-scroll">
           <div className="w-8 h-px bg-primary"></div>
-          <span className="font-bold font-dmsans">Engineered for Results</span>
+          <span className="font-bold font-dmsans">System_01 // On-Demand</span>
         </div>
         
         <h1 className="font-bebas text-7xl md:text-8xl lg:text-[9.5rem] leading-[0.85] tracking-tight uppercase text-foreground animate-on-scroll mb-8">
-          ENGINEERED<br/>
-          <span className="text-primary">PERFORMANCE</span><br/>
-          SYSTEM
+          FITNESS.<br/>
+          <span className="text-primary">ON DEMAND.</span><br/>
+          ENGINEERED.
         </h1>
         
         <p className="text-sm md:text-base text-foreground/60 leading-relaxed max-w-md font-dmsans animate-on-scroll mb-12">
-          NextUp delivers precision-engineered personal training for those who demand real results. Expert coaches, AI nutrition, and elite protocols.
+          The elite on-demand network for fitness professionals and serious athletes. Stop scheduling weeks in advance. Lock in local trainers instantly with dynamic pricing and a rapid 3-minute matchmaking protocol.
         </p>
         
         <div className="flex items-center gap-8 mb-20 animate-on-scroll">
           <Link href="/contact" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-white hover:-translate-y-1 transition-all">
-            Start Now
+            Book a Session
           </Link>
-          <a href="#gallery" className="text-foreground text-[10px] font-bold tracking-widest opacity-80 hover:opacity-100 hover:gap-3 transition-all uppercase inline-flex items-center gap-2">
-            See the Gym →
+          <a href="#trainers" className="text-foreground text-[10px] font-bold tracking-widest opacity-80 hover:opacity-100 hover:gap-3 transition-all uppercase inline-flex items-center gap-2">
+            Become a Trainer →
           </a>
         </div>
         
@@ -36,21 +36,21 @@ export function HeroSection() {
         <div className="flex gap-12 animate-on-scroll">
           <div className="flex flex-col">
             <div className="flex items-baseline gap-2">
-              <span className="font-bebas text-4xl text-primary tracking-wide">7D/7</span>
-            </div>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 font-bold font-dmsans">Open</span>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-baseline gap-2">
-              <span className="font-bebas text-4xl text-primary tracking-wide">8AM–11PM</span>
-            </div>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 font-bold font-dmsans">Hours</span>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-baseline gap-2">
               <span className="font-bebas text-4xl text-primary tracking-wide">100%</span>
             </div>
-            <span className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 font-bold font-dmsans">Personalised</span>
+            <span className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 font-bold font-dmsans">Real-Time</span>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-baseline gap-2">
+              <span className="font-bebas text-4xl text-primary tracking-wide">&lt; 3 MIN</span>
+            </div>
+            <span className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 font-bold font-dmsans">Match Rate</span>
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-baseline gap-2">
+              <span className="font-bebas text-4xl text-primary tracking-wide">24/7</span>
+            </div>
+            <span className="text-[10px] tracking-[0.2em] uppercase text-foreground/40 font-bold font-dmsans">Availability</span>
           </div>
         </div>
       </div>
