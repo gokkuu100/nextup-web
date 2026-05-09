@@ -28,6 +28,7 @@ export default function Home() {
         <SectorGrid />
         <LifestyleSplit />
         <HardwareInventory />
+        <Testimonials />
         <Pricing />
         <MarqueeSection />
         <ProTeam />
