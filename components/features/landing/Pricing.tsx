@@ -29,76 +29,63 @@ const PLANS = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-32 section-container bg-[#F2EFEA]">
-      <div className="max-w-[88rem] mx-auto px-6 lg:px-12">
-        
-        <div className="text-center mb-24">
-          <p className="text-sm font-medium tracking-tight opacity-50 mb-4 uppercase font-geist">
-            ( Value Architecture )
-          </p>
-          <h2 className="text-5xl md:text-7xl tracking-tighter font-jakarta font-light text-[#1D2331]">
-            Calibrated Pricing
-          </h2>
-        </div>
+    <section id="pricing" className="py-28 px-6 md:px-12 bg-background border-t border-foreground/5">
+      <div className="text-center mb-16">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-primary flex justify-center items-center gap-2 mb-4">
+          <span className="w-7 h-px bg-primary"></span>
+          <span>Choose your plan</span>
+          <span className="w-7 h-px bg-primary"></span>
+        </p>
+        <h2 className="font-bebas text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] tracking-tight uppercase text-foreground animate-on-scroll">
+          OUR MEMBERSHIP PLANS
+        </h2>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {PLANS.map((plan) => (
-            <div 
-              key={plan.name}
-              className={`relative p-8 rounded-3xl flex flex-col justify-between transition-all duration-500 border
+      <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {PLANS.map((plan, idx) => (
+          <div 
+            key={idx}
+            className={`flex flex-col items-center text-center p-10 reveal animate-on-scroll
+              ${plan.popular 
+                ? "bg-primary scale-105 shadow-[0_0_40px_rgba(163,230,53,0.15)] z-10 relative" 
+                : "bg-foreground/[0.02] border border-foreground/10"
+              }
+            `}
+          >
+            {plan.popular && <div className="absolute top-0 left-0 w-full h-1 bg-white/30"></div>}
+            <h3 className={`font-bold text-lg mb-2 tracking-wide uppercase font-dmsans ${plan.popular ? "text-black" : "text-foreground"}`}>
+              {plan.name}
+            </h3>
+            <div className={`font-bebas text-6xl mb-6 ${plan.popular ? "text-black" : "text-primary"}`}>
+              {plan.price}
+              <span className={`text-xl uppercase tracking-widest ${plan.popular ? "text-black/60" : "text-foreground/40"}`}> USD /Month</span>
+            </div>
+            
+            <ul className="space-y-4 text-xs w-full mb-8 flex-1 font-dmsans">
+              {plan.features.map((feature, i) => (
+                <li key={i} className={`flex items-center justify-center gap-2 ${plan.popular ? "text-black font-medium" : "text-foreground/60"}`}>
+                  <iconify-icon 
+                    icon="solar:check-circle-linear" 
+                    class={`text-base ${plan.popular ? "text-black" : "text-primary"}`}
+                  ></iconify-icon>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            <a 
+              href="#contact" 
+              className={`w-full text-xs font-bold uppercase tracking-widest py-3.5 transition-colors font-dmsans
                 ${plan.popular 
-                  ? "bg-[#1D2331] text-[#F2EFEA] border-[#1D2331] scale-105 z-10 shadow-2xl" 
-                  : "bg-white/50 text-[#1D2331] border-black/5 hover:border-[#1D2331]/20"
+                  ? "bg-black text-primary hover:bg-neutral-900" 
+                  : "border border-foreground/20 text-foreground hover:border-primary hover:text-primary"
                 }
               `}
             >
-              <div>
-                <div className="flex justify-between items-start mb-8">
-                  <div>
-                    <h3 className="text-2xl font-jakarta font-light mb-1">{plan.name}</h3>
-                    <p className={`text-sm opacity-60 font-geist ${plan.popular ? "text-white/70" : ""}`}>
-                      {plan.description}
-                    </p>
-                  </div>
-                  {plan.popular && (
-                    <span className="bg-[#C48C56] text-[#1D2331] text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
-                      Popular
-                    </span>
-                  )}
-                </div>
-
-                <div className="mb-12">
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-4xl md:text-5xl font-jakarta font-light tracking-tighter">${plan.price}</span>
-                    <span className="text-sm opacity-50 font-geist">/month</span>
-                  </div>
-                </div>
-
-                <div className="space-y-4 mb-12">
-                  {plan.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-3">
-                      <iconify-icon 
-                        icon="solar:check-read-linear" 
-                        class={`text-xl ${plan.popular ? "text-[#C48C56]" : "text-[#1D2331]/30"}`}
-                      ></iconify-icon>
-                      <span className="text-sm font-geist opacity-80">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <button className={`w-full py-4 rounded-2xl font-medium transition-all duration-300 font-geist
-                ${plan.popular 
-                  ? "bg-[#F2EFEA] text-[#1D2331] hover:bg-white" 
-                  : "border border-[#1D2331]/10 hover:bg-[#1D2331] hover:text-[#F2EFEA]"
-                }
-              `}>
-                {plan.button}
-              </button>
-            </div>
-          ))}
-        </div>
-
+              Choose {plan.name}
+            </a>
+          </div>
+        ))}
       </div>
     </section>
   );

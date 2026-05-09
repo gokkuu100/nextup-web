@@ -2,24 +2,28 @@ import React from "react";
 
 export function MarqueeSection() {
   const items = [
-    "ENGINEERED PERFORMANCE",
-    "ARCHITECTURAL COACHING",
-    "STRUCTURAL INTEGRITY",
-    "ENGINEERED PERFORMANCE",
-    "ARCHITECTURAL COACHING",
-    "STRUCTURAL INTEGRITY",
+    "KINETIC PERFORMANCE",
+    "ELITE COACHING",
+    "AI NUTRITION",
+    "KINETIC PERFORMANCE",
+    "ELITE COACHING",
+    "AI NUTRITION",
   ];
 
   return (
-    <section className="bg-[#0F1219] text-[#F2EFEA] py-8 overflow-hidden marquee-mask">
-      <div className="animate-marquee flex items-center gap-8 text-5xl md:text-7xl font-medium tracking-tighter whitespace-nowrap opacity-20">
-        {items.map((item, i) => (
-          <React.Fragment key={i}>
-            <span className="font-jakarta font-light">{item}</span>
-            <iconify-icon icon="solar:asterisk-bold-duotone" class="text-3xl"></iconify-icon>
-          </React.Fragment>
-        ))}
+    <div className="bg-primary py-3 overflow-hidden relative z-20 border-y border-primary/20">
+      <div className="flex w-max animate-marquee">
+        <div className="flex items-center gap-4">
+          {[...items, ...items].map((item, i) => (
+            <React.Fragment key={i}>
+              <span className="font-bebas text-xl tracking-[0.1em] uppercase text-black whitespace-nowrap px-8">
+                {item}
+              </span>
+              <span className="text-black text-xl">✦</span>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
