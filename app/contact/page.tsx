@@ -43,10 +43,10 @@ export default function ContactPage() {
               </div>
 
               {/* Socials */}
-              <div className="flex gap-6 mt-16">
+              <div className="flex gap-10 mt-16">
                 {['instagram', 'twitter', 'facebook', 'youtube'].map((social) => (
-                  <a key={social} href="#" className="w-12 h-12 flex items-center justify-center hover:bg-primary hover:text-black transition-all">
-                    <iconify-icon icon={`ant-design:${social}-filled`} class="text-xl"></iconify-icon>
+                  <a key={social} href="#" className="w-12 h-12 flex items-center justify-center border border-foreground/10 hover:bg-primary hover:text-black hover:border-primary transition-all">
+                    <iconify-icon icon={`ant-design:${social}-filled`} width="22" height="22"></iconify-icon>
                   </a>
                 ))}
               </div>
