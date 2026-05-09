@@ -55,23 +55,26 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Right Image Grid (Three Vertical Panels) */}
-      <div className="flex-1 relative min-h-[600px] lg:min-h-screen">
-        <div className="absolute inset-0 flex gap-1 p-1">
-          {/* Panel 1 */}
-          <div className="flex-1 relative overflow-hidden group">
-            <div className="absolute top-0 left-0 right-0 h-20 bg-[#04b011]/20 z-10 flex items-end p-2 overflow-hidden">
-               <img src="/images/workout-7.jpg" className="w-full h-full object-cover opacity-50" />
-            </div>
+      {/* Right Image Grid (Bento Grid) */}
+      <div className="flex-1 relative min-h-[600px] lg:min-h-screen p-4 lg:p-10">
+        <div className="h-full grid grid-cols-2 grid-rows-4 gap-4">
+          
+          {/* Big Item 1 */}
+          <div className="col-span-1 row-span-3 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-2xl">
             <img 
               src="/images/hero-fit.jpg" 
               alt="Elite Athlete" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div className="absolute bottom-6 left-6">
+               <span className="text-[10px] tracking-widest text-primary font-bold uppercase">System_01</span>
+               <h4 className="font-bebas text-2xl text-white uppercase">Precision</h4>
+            </div>
           </div>
           
-          {/* Panel 2 */}
-          <div className="flex-1 relative overflow-hidden group">
+          {/* Top Right Item 2 */}
+          <div className="col-span-1 row-span-2 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-xl">
             <img 
               src="/images/fit-female.jpg" 
               alt="Strength Training" 
@@ -79,15 +82,27 @@ export function HeroSection() {
             />
           </div>
           
-          {/* Panel 3 */}
-          <div className="flex-1 relative overflow-hidden group">
+          {/* Bottom Middle Item 3 */}
+          <div className="col-span-1 row-span-2 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-xl">
             <img 
               src="/images/fitness.jpg" 
               alt="Gym Environment" 
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
             />
-            <div className="absolute bottom-0 left-0 right-0 h-20 bg-[#93c5fd]/50 z-10"></div>
           </div>
+
+          {/* Bottom Left Small Item 4 */}
+          <div className="col-span-1 row-span-1 relative overflow-hidden group rounded-xl border border-foreground/5 shadow-xl">
+             <div className="absolute inset-0 bg-primary/20 backdrop-blur-sm z-10 flex items-center justify-center p-4">
+                <img src="/logo/nextup_icon_preview.png" className="h-12 w-auto opacity-80" />
+             </div>
+             <img 
+              src="/images/workout-7.jpg" 
+              alt="Gym Gear" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+
         </div>
       </div>
     </section>
