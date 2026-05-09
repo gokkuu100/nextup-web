@@ -196,4 +196,7 @@ body {
 
 @layer utilities {
   .text-balance { text-wrap: balance; }
+  .logo-green {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(35%) saturate(854%) hue-rotate(36deg) brightness(97%) contrast(93%);
+  }
 }

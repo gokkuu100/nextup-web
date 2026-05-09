@@ -9,7 +9,7 @@ export function Header() {
         <img 
           src="/logo/nextup_primary_logo_preview-removebg-preview.png" 
           alt="NextUp Logo" 
-          className="h-10 w-auto transition-transform group-hover:scale-105 dark:invert"
+          className="h-10 w-auto transition-transform group-hover:scale-105 logo-green"
         />
       </Link>
 

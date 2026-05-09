@@ -10,7 +10,7 @@ export function Footer() {
             <img 
               src="/logo/nextup_primary_logo_preview-removebg-preview.png" 
               alt="NextUp Logo" 
-              className="h-12 w-auto transition-transform group-hover:scale-105 dark:invert"
+              className="h-12 w-auto transition-transform group-hover:scale-105 logo-green"
             />
           </a>
           <p className="text-xs text-foreground/50 leading-relaxed max-w-xs font-dmsans">
