@@ -5,7 +5,7 @@
 :root {
   --background: #fdfdfd;
   --foreground: #0a0a0a;
-  --primary: #a3e635;
+  --primary: #06DC16;
   --mouse-x: 0px;
   --mouse-y: 0px;
 }
@@ -13,7 +13,7 @@
 .dark {
   --background: #0a0a0a;
   --foreground: #f2efea;
-  --primary: #a3e635;
+  --primary: #06DC16;
 }
 
 body {
@@ -65,7 +65,7 @@ body {
   left: 50%;
   width: 250%;
   height: 250%;
-  background: #a3e635 !important;
+  background: #06DC16 !important;
   border-radius: 42%;
   transform: translate(-50%, 0);
   transition: top 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 0.8s ease;

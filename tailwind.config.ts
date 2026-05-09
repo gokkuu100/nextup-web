@@ -19,8 +19,8 @@ const config: Config = {
       colors: {
         background:    "var(--background)",
         foreground:    "var(--foreground)",
-        primary:       "#a3e635",
-        "aura-accent": "#a3e635",
+        primary:       "#06DC16",
+        "aura-accent": "#06DC16",
         "aura-dark":   "var(--dark)",
         "aura-darker": "var(--darker)",
       },
