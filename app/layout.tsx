@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Playfair_Display } from "next/font/google";
+import { Bebas_Neue, DM_Sans, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { ThemeProvider } from "@/components/providers/theme-provider";
 import "./globals.css";
 
-const inter = Inter({
+const bebas = Bebas_Neue({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["300", "400", "500", "600"],
+  variable: "--font-bebas",
+  weight: ["400"],
   display: "swap",
 });
 
-const jakarta = Plus_Jakarta_Sans({
+const dmsans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-jakarta",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-dmsans",
+  weight: ["300", "400", "500", "600"],
   display: "swap",
 });
 
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
   description:
     "NextUp delivers precision-engineered personal training for those who demand real results. Expert coaches, AI nutrition, live sessions.",
   keywords: ["personal training", "fitness app", "online coach", "nutrition", "workout"],
+  icons: {
+    icon: "/logo/nextup_icon_preview.png",
+    apple: "/logo/nextup_icon_preview.png",
+  },
 };
 
 export default function RootLayout({
@@ -38,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${jakarta.variable} ${playfair.variable} bg-[#F2EFEA] text-[#1D2331] antialiased selection:bg-[#1D2331] selection:text-[#F2EFEA] overflow-x-hidden`}
+        className={`${bebas.variable} ${dmsans.variable} ${playfair.variable} bg-background text-foreground font-dmsans antialiased selection:bg-primary selection:text-black overflow-x-hidden transition-colors duration-500`}
       >
         {/* Vertical container lines */}
         <div className="fixed inset-0 pointer-events-none z-50 flex justify-center w-full mix-blend-multiply opacity-[0.04]">
@@ -50,7 +55,14 @@ export default function RootLayout({
           </div>
         </div>
 
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
 
         <Script
           src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"

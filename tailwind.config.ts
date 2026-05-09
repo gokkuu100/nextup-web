@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,18 +10,19 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans:     ["var(--font-inter)", "Inter", "sans-serif"],
-        jakarta:  ["var(--font-jakarta)", "Plus Jakarta Sans", "sans-serif"],
-        geist:    ["var(--font-inter)", "Inter", "sans-serif"],
+        bebas:    ["var(--font-bebas)", "Bebas Neue", "sans-serif"],
+        dmsans:   ["var(--font-dmsans)", "DM Sans", "sans-serif"],
+        sans:     ["var(--font-dmsans)", "DM Sans", "sans-serif"],
         playfair: ["var(--font-playfair)", "Playfair Display", "serif"],
-        display:  ["var(--font-jakarta)", "Plus Jakarta Sans", "sans-serif"],
+        display:  ["var(--font-bebas)", "Bebas Neue", "sans-serif"],
       },
       colors: {
-        background:    "#F2EFEA",
-        foreground:    "#1D2331",
-        "aura-accent": "#C48C56",
-        "aura-dark":   "#1D2331",
-        "aura-darker": "#0F1219",
+        background:    "var(--background)",
+        foreground:    "var(--foreground)",
+        primary:       "#a3e635",
+        "aura-accent": "#a3e635",
+        "aura-dark":   "var(--dark)",
+        "aura-darker": "var(--darker)",
       },
       keyframes: {
         animationIn: {

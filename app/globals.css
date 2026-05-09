@@ -3,18 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #F2EFEA;
-  --foreground: #1D2331;
-  --accent: #C48C56;
-  --dark: #1D2331;
-  --darker: #0F1219;
+  --background: #fdfdfd;
+  --foreground: #0a0a0a;
+  --primary: #a3e635;
   --mouse-x: 0px;
   --mouse-y: 0px;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f2efea;
+  --primary: #a3e635;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
 }
 
 /* ─── Letter Animation ─── */
@@ -36,31 +41,58 @@ body {
   100% { transform: translateY(0);     opacity: 1; }
 }
 
-/* ─── Beam Button ─── */
-.btn-beam {
+/* ─── Liquid Button Effect ─── */
+.btn-liquid {
   position: relative;
   z-index: 1;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  background: transparent !important;
 }
-.btn-beam::before {
+
+.btn-liquid::before {
   content: '';
   position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-  background-size: 200% 100%;
-  animation: beam 2s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  inset: 0;
+  background: white;
+  z-index: -2;
+}
+
+.btn-liquid::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 250%;
+  height: 250%;
+  background: #a3e635 !important;
+  border-radius: 42%;
+  transform: translate(-50%, 0);
+  transition: top 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 0.8s ease;
   z-index: -1;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  padding: 1px;
+  pointer-events: none;
 }
-.dark-btn.btn-beam::before {
-  background: linear-gradient(90deg, transparent, rgba(0,0,0,0.3), transparent);
+
+.btn-liquid:hover::after {
+  top: -75%;
+  transform: translate(-50%, 0) rotate(180deg);
 }
-.btn-beam:hover::before { opacity: 1; }
+
+.btn-liquid:hover {
+  color: #0a0a0a !important; /* Ensure visibility on green */
+}
+
+/* ─── Adaptive Primary Button ─── */
+.primary-btn {
+  @apply inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105;
+  background: #0a0a0a;
+  color: #fdfdfd;
+}
+
+.dark .primary-btn {
+  @apply btn-liquid;
+  color: #0a0a0a;
+}
 
 @keyframes beam {
   0%   { background-position: 0% 50%; }
