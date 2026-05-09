@@ -5,52 +5,31 @@ import React, { useState } from 'react';
 const ACCORDION_ITEMS = [
   {
     id: 1,
-    title: 'Instant Requests',
-    description: 'Connect with a certified professional in seconds through our high-speed dispatch system.',
+    title: 'On-Demand Trainers',
+    description: 'Request certified trainers to your location or meet at a nearby gym. Like Uber, but for fitness.',
     imageUrl: '/images/workout-5.jpg',
-    spec: 'CORE_01'
+    spec: 'ELITE_01'
   },
   {
     id: 2,
-    title: 'Real-time Availability',
-    description: 'Live status monitoring ensures you only see trainers ready for immediate engagement.',
+    title: 'Training Videos',
+    description: 'Access a library of professionally designed workout programs you can follow anytime.',
     imageUrl: '/images/workout-7.jpg',
-    spec: 'CORE_02'
+    spec: 'ELITE_02'
   },
   {
     id: 3,
-    title: 'Nearby Matching',
-    description: 'Hyper-local proximity analysis connects you with the closest qualified trainers in your area.',
-    imageUrl: '/images/workout-8.jpg',
-    spec: 'CORE_03'
+    title: 'AI Nutrition',
+    description: 'Get personalized food analysis based on your goals. Our AI helps you eat smarter.',
+    imageUrl: '/images/nutrition.jpg',
+    spec: 'ELITE_03'
   },
   {
     id: 4,
-    title: 'Profiles & Ratings',
-    description: 'In-depth performance data and community validation for every certified trainer.',
+    title: 'Live Training',
+    description: 'Train with expert coaches via live video. See them, they see you - exercise together.',
     imageUrl: '/images/hero-fit.jpg',
-    spec: 'CORE_04'
-  },
-  {
-    id: 5,
-    title: 'Precision Scheduling',
-    description: 'Seamless calendar synchronization for future-dated technical training sessions.',
-    imageUrl: '/images/fit-abs.jpg',
-    spec: 'CORE_05'
-  },
-  {
-    id: 6,
-    title: 'Meetup Systems',
-    description: 'Advanced location-based coordination for seamless in-person training rendezvous.',
-    imageUrl: '/images/fit-female.jpg',
-    spec: 'CORE_06'
-  },
-  {
-    id: 7,
-    title: 'Booking Confirmation',
-    description: 'Instant in-app verification and secure session locking for every scheduled event.',
-    imageUrl: '/images/workout-5.jpg',
-    spec: 'CORE_07'
+    spec: 'ELITE_04'
   },
 ];
 
