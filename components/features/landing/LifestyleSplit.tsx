@@ -22,32 +22,30 @@ export function LifestyleSplit() {
             <span>Fuel your performance</span>
           </p>
           <h2 className="font-bebas text-6xl md:text-8xl leading-[0.85] tracking-tight text-foreground uppercase mb-8">
-            AI DRIVEN<br/><span className="text-primary">NUTRITION</span>
+            SMART NUTRITION<br/><span className="text-primary">ANALYSIS</span>
           </h2>
           <p className="text-sm text-foreground/60 leading-relaxed max-w-lg mb-10 font-dmsans">
-            Our proprietary AI synthesis engine analyzes your biomechanical output to calibrate the optimal nutritional density for your specific training protocol.
+            Our AI analyzes your food and provides personalized recommendations based on your fitness goals. Whether you want to lose weight, build muscle, or maintain - we've got you covered.
           </p>
 
-          <ul className="space-y-6 mb-12 font-dmsans">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 font-dmsans">
             {[
-              { title: "Dynamic Meal Planning", desc: "Adjusts in real-time based on your daily energy expenditure." },
-              { title: "Macro Calibration", desc: "Precision protein, carb, and fat ratios for optimal recovery." },
-              { title: "Supplements Protocol", desc: "Expertly curated micronutrient stacks for peak cognitive focus." }
+              "Instant nutritional breakdown",
+              "Goal-aligned recommendations",
+              "Track macros effortlessly",
+              "Learn healthier alternatives"
             ].map((item, i) => (
               <li key={i} className="flex gap-4 group">
-                <div className="w-10 h-10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-colors">
-                  <iconify-icon icon="solar:check-read-linear" width="20"></iconify-icon>
+                <div className="flex-shrink-0 w-8 h-8 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-colors">
+                  <iconify-icon icon="solar:check-read-linear" width="16"></iconify-icon>
                 </div>
-                <div>
-                  <h4 className="font-bebas text-xl text-foreground tracking-wide uppercase mb-1">{item.title}</h4>
-                  <p className="text-xs text-foreground/40 leading-relaxed">{item.desc}</p>
-                </div>
+                <span className="text-xs text-foreground/70 uppercase tracking-wider font-bold pt-2">{item}</span>
               </li>
             ))}
           </ul>
 
           <a href="#pricing" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-white hover:-translate-y-1 transition-all self-start">
-            View Nutrition Plans
+            Get Started
           </a>
         </div>
 
