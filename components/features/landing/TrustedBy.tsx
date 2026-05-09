@@ -13,7 +13,7 @@ const brands = [
 
 export function TrustedBy() {
   return (
-    <section className="py-20 bg-[#111111] border-b border-foreground/5 overflow-hidden">
+    <section className="py-20 bg-foreground/[0.03] dark:bg-[#111111] border-b border-foreground/5 overflow-hidden">
       <div className="max-w-[88rem] mx-auto px-6 lg:px-12">
         <p className="text-center font-bebas text-sm tracking-[0.3em] uppercase text-foreground/30 mb-12">
           TRUSTED BY GLOBAL LEADERS
