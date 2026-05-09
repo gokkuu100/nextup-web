@@ -1,69 +1,54 @@
-import React from "react";
-
 export function ProTeam() {
+  const coaches = [
+    {
+      name: "Elena R.",
+      role: "Lead Biomechanist",
+      img: "/images/fit-female.jpg"
+    },
+    {
+      name: "Marcus T.",
+      role: "Performance Engineer",
+      img: "/images/hero-fit.jpg"
+    },
+    {
+      name: "Sarah L.",
+      role: "Kinetic Coach",
+      img: "/images/fit-abs.jpg"
+    }
+  ];
+
   return (
-    <section id="coaches" className="py-32 section-container">
-      <div className="max-w-[88rem] mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        
-        <div className="max-w-md">
-          <p className="text-sm font-medium tracking-tight opacity-50 mb-6 uppercase font-geist">
-            ( Expert Synthesis )
-          </p>
-          <h2 className="text-5xl md:text-7xl tracking-tighter font-jakarta font-light text-[#1D2331] leading-[0.9] mb-8">
-            Certified<br />Coaches
-          </h2>
-          <p className="text-lg opacity-60 font-geist leading-relaxed text-[#1D2331] mb-12">
-            Our elite coaching team is available to calibrate your performance metrics precisely to your spatial and biomechanical requirements.
-          </p>
+    <section id="coaches" className="py-28 px-6 md:px-12 bg-background border-t border-foreground/5">
+      <div className="text-center mb-16">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-primary flex justify-center items-center gap-2 mb-4">
+          <span className="w-7 h-px bg-primary"></span>
+          <span>Meet the team</span>
+          <span className="w-7 h-px bg-primary"></span>
+        </p>
+        <h2 className="font-bebas text-5xl md:text-6xl lg:text-[5.5rem] leading-[0.95] tracking-tight uppercase text-foreground animate-on-scroll">
+          EXPERT COACHS
+        </h2>
+      </div>
 
-          <div className="flex gap-8 items-start mb-12">
-            <iconify-icon icon="solar:arrow-right-up-linear" class="text-6xl text-black/20 flex-shrink-0"></iconify-icon>
-            
-            <div className="">
-              <p className="font-medium tracking-tight mb-4 text-sm uppercase opacity-50 font-geist">Consultation Protocols</p>
-              <ul className="space-y-3 text-base font-medium opacity-90 tracking-tight">
-                <li className="flex items-center gap-3 font-geist">
-                  <span className="w-1.5 h-1.5 rounded-full border border-current"></span>
-                  Biomechanical analysis & sizing
-                </li>
-                <li className="flex items-center gap-3 font-geist">
-                  <span className="w-1.5 h-1.5 rounded-full border border-current"></span>
-                  Nutritional density selection
-                </li>
-                <li className="flex items-center gap-3 font-geist">
-                  <span className="w-1.5 h-1.5 rounded-full border border-current"></span>
-                  Integration with existing routines
-                </li>
-                <li className="flex items-center gap-3 font-geist">
-                  <span className="w-1.5 h-1.5 rounded-full border border-current"></span>
-                  Performance timeline review
-                </li>
-              </ul>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        {coaches.map((coach, idx) => (
+          <div key={idx} className="group text-center animate-on-scroll">
+            <div className="relative overflow-hidden mb-6 h-[450px]">
+              <img 
+                src={coach.img} 
+                className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500" 
+                alt={coach.name}
+              />
+              <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                <a href="#" className="w-10 h-10 rounded-sm bg-primary text-black flex items-center justify-center hover:bg-white">
+                  <iconify-icon icon="solar:global-linear" width="20"></iconify-icon>
+                </a>
+              </div>
             </div>
+            <h3 className="font-bebas text-3xl text-foreground tracking-wide mb-1 uppercase">{coach.name}</h3>
+            <p className="text-[10px] tracking-widest text-primary uppercase font-bold font-dmsans">{coach.role}</p>
           </div>
-
-          <div className="flex items-center gap-6 mb-8 p-4 rounded-xl bg-white/40 backdrop-blur-sm border border-black/5">
-            <div className="w-14 h-14 rounded-full flex items-center justify-center bg-black/5 text-[#1D2331]/50">
-              <iconify-icon icon="solar:user-circle-bold-duotone" class="text-4xl"></iconify-icon>
-            </div>
-            <div>
-              <p className="text-sm font-medium tracking-tight font-geist">"We refine every movement until it feels inevitable."</p>
-              <p className="text-xs opacity-50 mt-1 uppercase tracking-wider font-geist">Elena R. — Lead Biomechanist</p>
-            </div>
-          </div>
-
-          <a href="#" className="btn-beam dark-btn inline-flex items-center gap-2 bg-[#1D2331] text-[#F2EFEA] px-6 py-3 rounded-full text-sm font-medium">
-            <span className="font-geist">Initiate Request</span>
-            <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
-          </a>
-        </div>
-
-        <div className="h-full min-h-[500px] relative rounded-2xl overflow-hidden card-flashlight">
-          <div className="card-content w-full h-full absolute inset-0">
-             <img src="/images/workout-7.jpg" alt="Training Configuration" className="w-full h-full object-cover opacity-80" />
-          </div>
-        </div>
-
+        ))}
       </div>
     </section>
   );
