@@ -40,13 +40,9 @@ export default function ContactPage() {
                 <span>Get in touch</span>
               </p>
               <h1 className="font-bebas text-7xl md:text-8xl lg:text-[9rem] leading-[0.85] tracking-tight uppercase text-foreground mb-12">
-<<<<<<< HEAD
-                LET&apos;S START THE<br/><span className="text-primary">DIALOGUE</span>
-=======
                 {"LET'S START THE"}
                 <br/>
                 <span className="text-primary">DIALOGUE</span>
->>>>>>> f4faf2b11f93600b3eb2be42197ff55ec47aafd6
               </h1>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 mt-16">
