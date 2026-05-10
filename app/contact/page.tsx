@@ -50,14 +50,14 @@ export default function ContactPage() {
                   <h4 className="font-bebas text-2xl tracking-wide uppercase mb-4 text-foreground">Location</h4>
                   <p className="text-sm text-foreground/60 leading-relaxed">
                     123 Performance Way<br />
-                    Elite District, Marrakech<br />
-                    Morocco
+                    Nairobi, Nairobi<br />
+                    Kenya
                   </p>
                 </div>
                 <div>
                   <h4 className="font-bebas text-2xl tracking-wide uppercase mb-4 text-foreground">Inquiries</h4>
                   <p className="text-sm text-foreground/60 leading-relaxed">
-                    hello@primegym.com<br />
+                    hello@nextupfit.com<br />
                     +212 6 00 00 00 00
                   </p>
                 </div>

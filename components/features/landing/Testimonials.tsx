@@ -3,19 +3,19 @@ import React from "react";
 const TESTIMONIALS = [
   {
     quote: "The precision in their training programs is unmatched. It's not just fitness; it's biomechanical engineering for the body.",
-    author: "Marcus Chen",
+    author: "MJ",
     role: "Elite Triathlete",
     id: "01",
   },
   {
     quote: "Finally, a platform that understands the synthesis between high-level nutrition and actual performance metrics.",
-    author: "Sarah Jenkins",
+    author: "MJ",
     role: "Performance Director",
     id: "02",
   },
   {
     quote: "The live coaching feels more like a technical consultation. Every rep is calibrated for maximum structural efficiency.",
-    author: "David Thorne",
+    author: "MJ",
     role: "Professional Athlete",
     id: "03",
   },
@@ -55,7 +55,7 @@ export function Testimonials() {
                   class="text-4xl text-primary mb-8 opacity-20 group-hover:opacity-100 transition-opacity"
                 ></iconify-icon>
                 <p className="text-xl italic leading-relaxed text-foreground/80 mb-12">
-                  &ldquo;{item.quote}&rdquo;
+                  "{item.quote}"
                 </p>
               </div>
               

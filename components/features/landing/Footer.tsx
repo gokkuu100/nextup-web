@@ -38,7 +38,7 @@ export function Footer() {
           <h4 className="font-bebas text-lg tracking-widest uppercase mb-6 text-foreground">Contact</h4>
           <ul className="space-y-3 text-xs tracking-widest uppercase text-foreground/50 font-dmsans">
             <li className="flex items-center gap-2"><iconify-icon icon="solar:phone-linear" class="text-primary"></iconify-icon> +212 6 00 00 00 00</li>
-            <li className="flex items-center gap-2"><iconify-icon icon="solar:letter-linear" class="text-primary"></iconify-icon> hello@nextup.com</li>
+            <li className="flex items-center gap-2"><iconify-icon icon="solar:letter-linear" class="text-primary"></iconify-icon> hello@nextupfit.com</li>
             <li className="flex items-center gap-2"><iconify-icon icon="solar:map-point-linear" class="text-primary"></iconify-icon> 123 Performance Way</li>
           </ul>
         </div>
@@ -63,7 +63,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-[88rem] mx-auto px-6 lg:px-12 pt-8 flex flex-col md:flex-row justify-between gap-6 text-[10px] tracking-[0.2em] uppercase text-foreground/30 font-dmsans">
-        <p>© {new Date().getFullYear()} NextUp Fitness. Built for champions.</p>
+        <p>© {new Date().getFullYear()} NextUpFit. Built for champions.</p>
         <div className="flex gap-8">
           <a href="#" className="hover:text-primary">Privacy Policy</a>
           <a href="#" className="hover:text-primary">Terms of Service</a>

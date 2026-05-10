@@ -1,17 +1,17 @@
 export function ProTeam() {
   const coaches = [
     {
-      name: "Elena R.",
+      name: "MJ.",
       role: "Lead Biomechanist",
       img: "/images/fit-female.jpg"
     },
     {
-      name: "Marcus T.",
+      name: "MJ",
       role: "Performance Engineer",
       img: "/images/hero-fit.jpg"
     },
     {
-      name: "Sarah L.",
+      name: "MJ",
       role: "Kinetic Coach",
       img: "/images/fit-abs.jpg"
     }
