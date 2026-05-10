@@ -29,6 +29,12 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "NextUp Fitness — Engineered for Performance",
   description:
+    "The elite on-demand network for fitness professionals and serious athletes. Stop scheduling weeks in advance. Lock in local trainers instantly with dynamic pricing and a rapid 3-minute matchmaking protocol.",
+  verification: {
+    google: "QV9D8kAFs2I-5OGG0zMow9T_DMWJUBNulwS5mplTQFg",
+  },
+};
+  description:
     "NextUp delivers precision-engineered personal training for those who demand real results. Expert coaches, AI nutrition, live sessions.",
   keywords: ["personal training", "fitness app", "online coach", "nutrition", "workout"],
   icons: {
