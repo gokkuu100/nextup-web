@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export function LifestyleSplit() {
   return (
@@ -6,10 +7,11 @@ export function LifestyleSplit() {
       <div className="max-w-[88rem] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
         <div className="relative h-[600px] overflow-hidden animate-on-scroll">
-          <img 
+          <Image 
             src="/images/nutrition.jpg" 
-            alt="AI Nutrition" 
-            className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+            alt="AI Nutrition"
+            fill
+            className="object-cover hover:scale-105 transition-all duration-700"
           />
           <div className="absolute top-8 left-8 bg-primary text-black font-bebas text-2xl px-6 py-2 tracking-wide uppercase">
             Precision Fuel
@@ -25,7 +27,7 @@ export function LifestyleSplit() {
             SMART NUTRITION<br/><span className="text-primary">ANALYSIS</span>
           </h2>
           <p className="text-sm text-foreground/60 leading-relaxed max-w-lg mb-10 font-dmsans">
-            Our AI analyzes your food and provides personalized recommendations based on your fitness goals. Whether you want to lose weight, build muscle, or maintain - we've got you covered.
+            Our AI analyzes your food and provides personalized recommendations based on your fitness goals. Whether you want to lose weight, build muscle, or maintain - we&apos;ve got you covered.
           </p>
 
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12 font-dmsans">

@@ -48,7 +48,7 @@ export function Footer() {
           <form action={async (formData) => {
             const result = await subscribeNewsletter(formData);
             if (result.success) {
-              alert(result.message || "Subscribed successfully!");
+              alert("Subscribed successfully!");
             } else {
               alert("Something went wrong.");
             }
