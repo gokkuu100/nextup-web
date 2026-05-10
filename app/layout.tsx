@@ -33,10 +33,13 @@ export const metadata: Metadata = {
   verification: {
     google: "QV9D8kAFs2I-5OGG0zMow9T_DMWJUBNulwS5mplTQFg",
   },
-};
-  description:
-    "NextUp delivers precision-engineered personal training for those who demand real results. Expert coaches, AI nutrition, live sessions.",
-  keywords: ["personal training", "fitness app", "online coach", "nutrition", "workout"],
+  keywords: [
+    "personal training",
+    "fitness app",
+    "online coach",
+    "nutrition",
+    "workout",
+  ],
   icons: {
     icon: "/logo/icon_N_standalone_mono_black.png",
     apple: "/logo/icon_N_standalone_mono_black.png",
