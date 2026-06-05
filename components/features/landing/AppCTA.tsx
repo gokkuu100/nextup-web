@@ -24,6 +24,7 @@ export function AppCTA() {
           </a>
         </div>
 
+
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4 animate-on-scroll">
           <a href="#" className="flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 px-6 py-3 rounded-sm transition-all w-full sm:w-auto">
             <iconify-icon icon="tabler:brand-apple" class="text-3xl text-white"></iconify-icon>
