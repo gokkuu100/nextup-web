@@ -57,8 +57,8 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-bebas text-2xl tracking-wide uppercase mb-4 text-foreground">Inquiries</h4>
                   <p className="text-sm text-foreground/60 leading-relaxed">
-                    hello@nextupfit.com<br />
-                    +212 6 00 00 00 00
+                    connect@nextupfitness.com<br />
+                    +1 (619) 865-2747
                   </p>
                 </div>
               </div>

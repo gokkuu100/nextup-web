@@ -19,8 +19,8 @@ export function AppCTA() {
           <Link href="/contact" className="bg-primary text-black font-bold text-[10px] tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-white hover:-translate-y-1 transition-all">
             Join the Network
           </Link>
-          <a href="tel:+2120000000" className="text-white text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors font-dmsans">
-            Or call us: +212 6 00 00 00 00
+          <a href="tel:+16198652747" className="text-white text-[10px] font-bold tracking-widest uppercase hover:text-primary transition-colors font-dmsans">
+            Or call us: +1 (619) 865-2747
           </a>
         </div>
 

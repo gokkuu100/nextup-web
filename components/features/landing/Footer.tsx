@@ -37,8 +37,8 @@ export function Footer() {
         <div className="col-span-1">
           <h4 className="font-bebas text-lg tracking-widest uppercase mb-6 text-foreground">Contact</h4>
           <ul className="space-y-3 text-xs tracking-widest uppercase text-foreground/50 font-dmsans">
-            <li className="flex items-center gap-2"><iconify-icon icon="solar:phone-linear" class="text-primary"></iconify-icon> +212 6 00 00 00 00</li>
-            <li className="flex items-center gap-2"><iconify-icon icon="solar:letter-linear" class="text-primary"></iconify-icon> hello@nextupfit.com</li>
+            <li className="flex items-center gap-2"><iconify-icon icon="solar:phone-linear" class="text-primary"></iconify-icon> +1 (619) 865-2747</li>
+            <li className="flex items-center gap-2"><iconify-icon icon="solar:letter-linear" class="text-primary"></iconify-icon> connect@nextupfitness.com</li>
             <li className="flex items-center gap-2"><iconify-icon icon="solar:map-point-linear" class="text-primary"></iconify-icon> 123 Performance Way</li>
           </ul>
         </div>
