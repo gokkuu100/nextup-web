@@ -39,7 +39,7 @@ export function Footer() {
           <ul className="space-y-3 text-xs tracking-widest uppercase text-foreground/50 font-dmsans">
             <li className="flex items-center gap-2"><iconify-icon icon="solar:phone-linear" class="text-primary"></iconify-icon> +1 (619) 865-2747</li>
             <li className="flex items-center gap-2"><iconify-icon icon="solar:letter-linear" class="text-primary"></iconify-icon> connect@nextupfitness.com</li>
-            <li className="flex items-center gap-2"><iconify-icon icon="solar:map-point-linear" class="text-primary"></iconify-icon> 123 Performance Way</li>
+            <li className="flex items-center gap-2"><iconify-icon icon="solar:map-point-linear" class="text-primary"></iconify-icon> 400 MARQUETTE AVE APT 2306, MN 55401</li>
           </ul>
         </div>
 

@@ -49,9 +49,7 @@ export default function ContactPage() {
                 <div>
                   <h4 className="font-bebas text-2xl tracking-wide uppercase mb-4 text-foreground">Location</h4>
                   <p className="text-sm text-foreground/60 leading-relaxed">
-                    123 Performance Way<br />
-                    Nairobi, Nairobi<br />
-                    Kenya
+                    400 MARQUETTE AVE APT 2306, MN 55401
                   </p>
                 </div>
                 <div>
