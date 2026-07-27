@@ -109,6 +109,55 @@ export async function submitContactForm(formData: FormData) {
   }
 }
 
+export async function submitDataDeletionRequest(formData: FormData) {
+  const fullName = (formData.get("fullName") as string)?.trim();
+  const email = (formData.get("email") as string)?.trim();
+  const accountType = (formData.get("accountType") as string)?.trim();
+  const details = ((formData.get("details") as string) ?? "").trim();
+
+  const nameParts = fullName.split(/\s+/);
+  const firstName = nameParts[0] ?? fullName;
+  const lastName = nameParts.slice(1).join(" ") || "—";
+
+  const message = [
+    "Data deletion request submitted via website.",
+    `Account type: ${accountType}`,
+    details ? `Additional details: ${details}` : null,
+    "Please verify identity and process account deletion per Privacy Policy.",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  try {
+    const sql = getSql();
+    await sql`
+      INSERT INTO "Contact" ("id", "firstName", "lastName", "email", "subject", "message")
+      VALUES (
+        ${randomUUID()},
+        ${firstName},
+        ${lastName},
+        ${email},
+        ${"Data Deletion Request"},
+        ${message}
+      )
+    `;
+
+    revalidatePath("/delete-data");
+    return { success: true as const };
+  } catch (error) {
+    if (isConnectionFailure(error)) {
+      console.error("[delete-data] Database connection error:", error);
+    } else {
+      console.error("[delete-data] Database error:", error);
+    }
+
+    return {
+      success: false as const,
+      error: userFacingSubmitError(error),
+    };
+  }
+}
+
 export async function subscribeNewsletter(formData: FormData) {
   const email = formData.get("email") as string;
 

@@ -1,5 +1,6 @@
 import React from "react";
-import { subscribeNewsletter } from "@/app/actions/contact";
+import Link from "next/link";
+import { NewsletterForm } from "@/components/features/landing/NewsletterForm";
 
 export function Footer() {
   return (
@@ -45,28 +46,17 @@ export function Footer() {
 
         <div className="col-span-1">
           <h4 className="font-bebas text-lg tracking-widest uppercase mb-6 text-foreground">Newsletter</h4>
-          <form action={async (formData) => {
-            const result = await subscribeNewsletter(formData);
-            if (result.success) {
-              alert("Subscribed successfully!");
-            } else {
-              alert(result.error ?? "Something went wrong.");
-            }
-          }} className="flex border-b border-foreground/20 pb-2">
-            <input name="email" type="email" required placeholder="YOUR EMAIL" className="bg-transparent text-[10px] tracking-widest outline-none flex-1 font-dmsans"/>
-            <button type="submit" className="text-primary hover:text-white transition-colors">
-              <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-            </button>
-          </form>
+          <NewsletterForm />
         </div>
 
       </div>
 
       <div className="max-w-[88rem] mx-auto px-6 lg:px-12 pt-8 flex flex-col md:flex-row justify-between gap-6 text-[10px] tracking-[0.2em] uppercase text-foreground/30 font-dmsans">
         <p>© {new Date().getFullYear()} NextUpFit. Built for champions.</p>
-        <div className="flex gap-8">
-          <a href="#" className="hover:text-primary">Privacy Policy</a>
-          <a href="#" className="hover:text-primary">Terms of Service</a>
+        <div className="flex flex-wrap gap-x-8 gap-y-2">
+          <Link href="/privacy" className="hover:text-primary">Privacy Policy</Link>
+          <Link href="/terms" className="hover:text-primary">Terms of Service</Link>
+          <Link href="/delete-data" className="hover:text-primary">Delete My Data</Link>
         </div>
       </div>
     </footer>
